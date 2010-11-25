@@ -1,0 +1,48 @@
+$def with (myelections, allmycandidates, allmyoffices, ballotlink)
+
+<script type="text/javascript" src="static/scripts/showdiv.js"></script>
+
+<td colspan="3">
+	Elections: 
+	<select onchange="showDiv(this.options[this.selectedIndex].value);">
+	$for election in myelections:		
+		<option value="$loop.index">$election.fullname</option>
+                $if loop.last:
+                      $ lastelection = loop.index
+	</select>
+	&nbsp; &nbsp;
+	<a target="wikiframe" href="$ballotlink">Click here for ballot referenda items.</a>
+</td></tr><tr>
+<td width="20%">
+	<p>
+	<div style="postion:relative;">
+	$for mycandidates in allmycandidates:
+		<div id="showdiv$loop.index" style="visibility:hidden;position:absolute;">
+                <p> 
+                $ myoffices = allmyoffices[loop.index0]   	
+		$for office in myoffices:
+		    </p><p>$office:<br>
+
+                    $ gotcandidate = 0
+                    $for candidate in mycandidates:
+                        $if candidate.electionOffice == office:
+                             $ gotcandidate = 1
+                             <a target="wikiframe" href="http://en.wikipedia.org/wiki/$candidate.wikiname?trust">$candidate.ballotname $candidate.party</a><br>
+                    $if gotcandidate == 0:
+                        No candidates for your district
+                </div></p>
+	</div></p>
+	<script type="text/javascript">
+		var totaldivs = $lastelection;	
+		showDiv(1);
+	</script>
+</td>
+<td with="2%">
+&nbsp;
+</td>
+<td>
+	<br>
+	<iframe src="static/default.html" width="100%" height="500" name="wikiframe">
+	</iframe>	
+
+</td>

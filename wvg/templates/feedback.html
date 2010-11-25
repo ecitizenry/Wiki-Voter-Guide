@@ -1,0 +1,52 @@
+$def with (form, message)
+
+<td width="90%">
+
+	$if message:
+		<p>
+		<b><font color="blue">$message</font></b>
+	</p><p>
+	Your comments and feedback help us make this site better. You can submit feedback by filling out this form or by emailing us at: <a href="mailto:support@wikivoterguide.com">support@wikivoterguide.com</a>.
+	</p><p>
+	If you're writing just to tell us that there is no Wikipedia page about a particular politician - we know that there are a lot of gaps. 
+We rely on the community of people who contribute to Wikipedia to make it
+a useful resource for researching elections. <a href="/contributing">Click here</a> to learn how you can help. 
+	</p><p>
+	If you provide us your email address and Zip+4 code it will be easier
+for us to reproduce any issues you are having and communicate with you as
+we work to address them. Of course, any information that you submit via our
+feedback form will be <a href="/privacy">retained</a> in our email inbox..  	
+	</p><p>
+	<table>
+	<tr><td width="15%">
+	<form name="feedback" method="post">
+	Your name: 
+	</td><td>
+	<input type="text" size="30" id="name" name="name"/><br>
+	</td></tr>
+	<tr><td>
+        Your email address:
+	</td><td>
+	<input type="text" size="30" id="email" name="email"/><br>
+	</td></tr>
+	<tr><td>
+        Your Zip+4:
+	</td><td>
+	<input type="text" id="zipplusfor" name="zipplusfour"/><br>
+	</td></tr>
+	<tr><td>
+        Your feedback: 
+	</td><td>
+	<textarea rows="15" cols="50" id="feedback" name="feedback"></textarea>
+	</td></tr>
+	<tr><td>
+	&nbsp;
+	</td></tr>
+	<tr><td>
+	&nbsp;
+	</td><td>
+	<input value="Submit Feedback" type="submit"></form>
+	</td></tr>
+	</table>
+</td>
+<td width="10%">&nbsp;</td>

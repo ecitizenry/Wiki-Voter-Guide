@@ -1,0 +1,58 @@
+$def with (error)
+
+<td width="90%">
+
+	<p>
+
+	Wiki Voter Guide is a website that helps you research upcoming elections in the United States using Wikipedia. Why use Wikipedia for this purpose? On the one hand, Wikipedia can contain information that is incorrect or misleading, 
+because it can be edited by anyone. However, we believe that Wikipedia can be a useful resource if it is used properly and read with a 
+critical eye. Its openness and collaborative process enables people to work
+together to create 
+objective documentation of a politican's positions and views,
+independent of any campaign or special interest. Also, the 
+<a href="/guide">WikiTrust Browser Plugin</a> makes it easier to identify and eliminate vandalism. You can read a detailed discussion of the philosophy and origins of this website by <a href="/about">clicking here.</a> 
+
+	</p>
+	<p>
+	<a href="http://www.youtube.com/watch?v=AQOQC1-tJwQ" target="_blank">Click here</a> to watch a 4 minute YouTube video introducing Wiki Voter Guide.
+	</p>
+	<p>
+
+        <b> <font color="red">Warning: This web site is an experiment!</font></b> You may encounter information here that is  
+<b>incorrect or misleading!</b> Please <a href="/guide"><b>read our guide</b></a> on how to properly use this website before you proceed. <font size="3"><b>Also, please consider installing the <a href="/guide">WikiTrust Browser Plugin.</a></b></font>
+	
+	</p><p><b> Wiki Voter Guide needs your help. </b> You may notice as you use 
+this site that most political campaigns are not covered in Wikipedia. Anyone can 
+contribute to making Wikipedia a more comprehensive and accurate resource.
+<a href="/contributing">Click here</a> for more information on how to chip in. 
+	</p><p>
+
+	To continue using this website please enter your Zip+4 code so that we can look up your upcoming races. The website will not work if you just enter your 5 digit Zip code - you must enter your Zip+4 in order to give us enough granularity to accurately pull up your voting districts. 
+	</p><p>
+	<b>If you do not know your Zip+4 code, you can <a href="http://zip4.usps.com/zip4/" target="_blank">look it up</a> at the U.S. Postal Service.</b> 
+	
+	$if error:
+		<P><font color="red">$error</font></p><p>
+	<FORM action="getraces" method="post">		
+	</p><p>
+	Your Zip+4:
+	<INPUT type="text" name="zipplusfour" lenght="10">
+	<INPUT type="submit" name="submit" value="Proceed">
+	(Results may take a moment to retrieve, please be patient.)
+	</FORM>
+
+	</p><p>
+	<p>
+
+
+      <p>
+
+	We do not store your Zip+4 code, please read our <a href="/privacy">Privacy Policy</a> for more information. 
+	</p><p>
+	<i>Our search capability is powered by data and technology from <a href="http://www.votesmart.org/">Project Vote Smart</a> and <a href="http://sunlightlabs.com/">Sunlight Labs.</a>
+</i>
+	</p>
+	
+	<p>Follow us: <a href="http://twitter.com/wikivoterguide"><img height="20" width="20" src="static/images/t_logo-a.png"></a> <a href="http://www.facebook.com/pages/Wiki-Voter-Guide/165317416813586"><img height="20" width="20" src="static/images/f_logo.jpg"></a></p>
+</td>
+<td width="10%">&nbsp;</td>

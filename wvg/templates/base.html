@@ -1,0 +1,64 @@
+$def with (page)
+
+<html>
+
+  <title> Wiki Voter Guide </title>
+
+  <link rel="STYLESHEET" type="text/css" href="static/styles/style.css">
+  
+<body>
+
+  <table border="0">
+    <tr>
+      <td align="right" colspan="3">
+
+	    <img height="63" width="330" src="static/images/wvglogo.jpg"  >
+
+      </td>
+    </tr>    
+    <tr>
+      <td align="left" colspan="3">
+
+        <span style="font-size: 80%; margin-right: 5em">
+        <em><font color="blue">
+"If a nation expects to be ignorant and free, in a state of
+civilization, it expects what never was and never will be."
+- Thomas Jefferson</font></em>
+	</span> 
+
+	<ul id="navbar">
+	<li><a href="/">Home</a>
+	<li><a href="/about">About Us</a>
+	<li><a href="/news">News</a>
+	<li><a href="/guide">Using This Site</a>
+	<li><a href="/contributing">How To Help</a>
+	<li><a href="/feedback">Feedback</a>
+	<li><a href="/privacy">Privacy</a>
+	</ul>
+     	<br> <br> <br>  
+	</td>
+    </tr>
+    <tr>
+
+$:page
+
+    </tr>
+  </table>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-994065-10']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+
+</html>
