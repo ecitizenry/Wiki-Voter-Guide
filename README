@@ -12,3 +12,49 @@ Org: http://www.enlightenedcitizenry.org/
 
 Source: http://github.com/ecitizenry/Wiki-Voter-Guide
 
+Installation notes:
+
+These are some notes on installing Wiki Voter Guide on a fresh system.
+These are not step by step instructions, just an outline of what is
+needed. You'll need to think. 
+
+Install Wiki-Voter-Guide:
+
+git clone http://github.com/ecitizenry/Wiki-Voter-Guide.git
+
+cp -R wvg /var/www/wvg/
+mkdir /var/www/wvg/wvg/python_egg_cache
+chmod go+w /var/www/wvg/wvg/python_egg_cache 
+
+(You may need to do something more intelligent than making the 
+egg cache world writable depending on your local environment
+and security issues.) 
+
+Install Python-Votesmart:
+
+git clone http://github.com/sunlightlabs/python-votesmart.git
+python setup.py install
+
+Install webpy:
+
+git clone http://github.com/webpy/webpy.git
+python setup.py install
+
+Install Apache Mod_WSGI:
+
+yum install mod_wsgi
+
+Configure the VoteSmart API key:
+
+Wiki Voter Guide needs a cryptographic key to access the Project
+VoteSmart API. You can obtain a key at the link below. It needs
+to be placed in the python-wvg configuration file. 
+
+http://www.votesmart.org/user_register.php
+
+Configure Apache: (ymmv)
+
+echo 'Include /var/www/wvg/wvg/conf/apache-wvg.conf' >> /var/httpd/conf/httpd.conf
+
+You might need to edit apache-wvg.conf and set the VirtualHost directive
+to "*" instead of 127.0.0.1:8081
