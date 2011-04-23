@@ -120,7 +120,8 @@ class getraces:
                         allmycandidates.append(mycandidates)	
                 return render.getraces(myelections, allmycandidates, allmyoffices, ballotlink)
             except: 
-                return render.home('Error processing your Zip+4 code. You MUST enter your Zip+4 and not just your regular 5 digit Zip code to proceed. Did you enter it correctly? (For example: 20500-0001)')
+		return render.home('Unfortunatley, WikiVoterGuide may not be functioning properly right now because there is no pending major political election in the United States. Please try back later.')                
+		#return render.home('Error processing your Zip+4 code. You MUST enter your Zip+4 and not just your regular 5 digit Zip code to proceed. Did you enter it correctly? (For example: 20500-0001)')
 
 
 def prepareCandidate(candidate):
